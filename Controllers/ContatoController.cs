@@ -25,4 +25,9 @@ public class ContatoController : Controller
     {
         return View();
     }
+
+    public IActionResult Delete()
+    {
+        return View();
+    }
  }

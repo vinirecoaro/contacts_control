@@ -47,8 +47,11 @@ public class ContactController : Controller
     [HttpPost]
     public IActionResult Create(ContactModel contact)
     {
-        _contatoRepository.Add(contact);
-        return RedirectToAction("Index");
+        if(ModelState.IsValid){
+            _contatoRepository.Add(contact);
+            return RedirectToAction("Index");
+        }
+        return View(contact);
     }
 
     [HttpPost]

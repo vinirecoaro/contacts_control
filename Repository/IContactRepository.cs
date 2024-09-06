@@ -8,5 +8,6 @@ namespace ContactsControl.Repository
         List<ContactModel> FetchAll();
         ContactModel Add(ContactModel contact);
         ContactModel Update(ContactModel contact);
+        bool Delete(int id);
     }
 }

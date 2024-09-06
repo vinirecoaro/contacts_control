@@ -32,14 +32,16 @@ public class ContactController : Controller
         return View(contact);
     }
 
-    public IActionResult DeleteConfirmation()
+    public IActionResult DeleteConfirmation(int id)
     {
-        return View();
+        ContactModel contact = _contatoRepository.ListById(id);
+        return View(contact);
     }
 
-    public IActionResult Delete()
+    public IActionResult Delete(int id)
     {
-        return View();
+        _contatoRepository.Delete(id);
+        return RedirectToAction("Index");
     }
 
     [HttpPost]

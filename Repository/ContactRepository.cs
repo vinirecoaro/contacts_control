@@ -46,6 +46,18 @@ namespace ContactsControl.Repository
             return contactDB;
 
         }
+
+        public bool Delete(int id)
+        {
+            ContactModel contactDB = ListById(id);
+            
+            if(contactDB == null) throw new System.Exception("Houve um erro na exclusão do contato");
+
+            _databaseContext.Contacts.Remove(contactDB);
+            _databaseContext.SaveChanges();
+            
+            return true;
+        }
     }
 
 

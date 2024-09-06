@@ -2,6 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ContactsControl.Models;
 using ContactsControl.Repository;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace ContactsControl.Controllers;
 
@@ -57,7 +58,10 @@ public class ContactController : Controller
     [HttpPost]
     public IActionResult Edit(ContactModel contact)
     {
-        _contatoRepository.Update(contact);
-        return RedirectToAction("Index");
+       if(ModelState.IsValid){
+            _contatoRepository.Update(contact);
+            return RedirectToAction("Index");
+       }
+        return View(contact);
     }
  }

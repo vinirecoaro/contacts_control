@@ -13,12 +13,19 @@ namespace ContactsControl.Repository
             _databaseContext = databaseContext;
         }
 
+        public List<ContactModel> FetchAll()
+        {
+            return _databaseContext.Contacts.ToList();
+        }
+
         public ContactModel Add(ContactModel contact)
         {
             _databaseContext.Contacts.Add(contact);
             _databaseContext.SaveChanges();
             return contact;
         }
+
+        
     }
 
 

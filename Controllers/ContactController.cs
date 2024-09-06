@@ -5,19 +5,20 @@ using ContactsControl.Repository;
 
 namespace ContactsControl.Controllers;
 
-public class ContatoController : Controller
+public class ContactController : Controller
 {
 
     private readonly IContactRepository _contatoRepository;
 
-    public ContatoController(IContactRepository contactRepository)
+    public ContactController(IContactRepository contactRepository)
     {
         _contatoRepository = contactRepository;
     }
 
     public IActionResult Index()
     {
-        return View();
+        List<ContactModel> contacts = _contatoRepository.FetchAll();
+        return View(contacts);
     }
 
     public IActionResult Create()

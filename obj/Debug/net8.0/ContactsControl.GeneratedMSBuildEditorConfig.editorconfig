@@ -18,24 +18,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\Vinicius\Downloads\Carreira_Dev\Projetos\WEB\ContactsControl
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Vinicius/Downloads/Carreira_Dev/Projetos/WEB/ContactsControl/Views/Contato/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xDcmVhdGUuY3NodG1s
+[C:/Users/Vinicius/Downloads/Carreira_Dev/Projetos/WEB/ContactsControl/Views/Contact/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Vinicius/Downloads/Carreira_Dev/Projetos/WEB/ContactsControl/Views/Contato/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xEZWxldGUuY3NodG1s
+[C:/Users/Vinicius/Downloads/Carreira_Dev/Projetos/WEB/ContactsControl/Views/Contact/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Vinicius/Downloads/Carreira_Dev/Projetos/WEB/ContactsControl/Views/Contato/DeleteConfirmation.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xEZWxldGVDb25maXJtYXRpb24uY3NodG1s
+[C:/Users/Vinicius/Downloads/Carreira_Dev/Projetos/WEB/ContactsControl/Views/Contact/DeleteConfirmation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxEZWxldGVDb25maXJtYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Vinicius/Downloads/Carreira_Dev/Projetos/WEB/ContactsControl/Views/Contato/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xFZGl0LmNzaHRtbA==
+[C:/Users/Vinicius/Downloads/Carreira_Dev/Projetos/WEB/ContactsControl/Views/Contact/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Vinicius/Downloads/Carreira_Dev/Projetos/WEB/ContactsControl/Views/Contato/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGF0b1xJbmRleC5jc2h0bWw=
+[C:/Users/Vinicius/Downloads/Carreira_Dev/Projetos/WEB/ContactsControl/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Vinicius/Downloads/Carreira_Dev/Projetos/WEB/ContactsControl/Views/Home/Index.cshtml]

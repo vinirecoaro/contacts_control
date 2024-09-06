@@ -41,27 +41,58 @@ public class ContactController : Controller
 
     public IActionResult Delete(int id)
     {
-        _contatoRepository.Delete(id);
-        return RedirectToAction("Index");
+        try
+        {
+            bool deleted = _contatoRepository.Delete(id);
+            if(deleted){
+                TempData["SuccessMessage"] = "Contato excluido com sucesso";
+            }else{
+                TempData["ErrorMessage"] = $"Não foi possível excluir seu contato, tente novamente";
+            }
+            return RedirectToAction("Index");
+        }
+        catch (System.Exception error)
+        {
+            TempData["ErrorMessage"] = $"Não foi possível excluir seu contato, tente novamente, detalhe do erro: {error.Message}";
+            throw;
+        }
     }
 
     [HttpPost]
     public IActionResult Create(ContactModel contact)
     {
-        if(ModelState.IsValid){
-            _contatoRepository.Add(contact);
-            return RedirectToAction("Index");
+        try
+        {
+            if(ModelState.IsValid){
+                _contatoRepository.Add(contact);
+                TempData["SuccessMessage"] = "Contato cadastrado com sucesso";
+                return RedirectToAction("Index");
+            }
+            return View(contact);
         }
-        return View(contact);
+        catch (System.Exception error)
+        {
+            TempData["ErrorMessage"] = $"Não foi possível cadastrar seu contato, tente novamente, detalhe do erro: {error.Message}";
+            throw;
+        }
     }
 
     [HttpPost]
     public IActionResult Edit(ContactModel contact)
     {
-       if(ModelState.IsValid){
+       try
+       {
+        if(ModelState.IsValid){
             _contatoRepository.Update(contact);
+            TempData["SuccessMessage"] = "Contato alterado com sucesso";
             return RedirectToAction("Index");
        }
         return View(contact);
+       }
+       catch (System.Exception error)
+       {
+            TempData["ErrorMessage"] = $"Não foi possível alterar seu contato, tente novamente, detalhe do erro: {error.Message}";
+            throw;
+       }
     }
  }

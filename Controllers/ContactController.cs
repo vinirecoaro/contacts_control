@@ -26,9 +26,10 @@ public class ContactController : Controller
         return View();
     }
 
-    public IActionResult Edit()
+    public IActionResult Edit(int id)
     {
-        return View();
+        ContactModel contact = _contatoRepository.ListById(id);
+        return View(contact);
     }
 
     public IActionResult DeleteConfirmation()
@@ -45,6 +46,13 @@ public class ContactController : Controller
     public IActionResult Create(ContactModel contact)
     {
         _contatoRepository.Add(contact);
+        return RedirectToAction("Index");
+    }
+
+    [HttpPost]
+    public IActionResult Edit(ContactModel contact)
+    {
+        _contatoRepository.Update(contact);
         return RedirectToAction("Index");
     }
  }
